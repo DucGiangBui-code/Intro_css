@@ -1,96 +1,120 @@
 /* ==========================================================================
-   BƯỚC 3: Tạo kiểu cho thẻ body (Toàn bộ trang web)
+   ĐỊNH DẠNG BODY TOÀN TRANG
    ========================================================================== */
 body {
-    font-family: Arial, Helvetica, sans-serif; /* Sửa đổi họ phông chữ */
-    font-size: 16px;                           /* Sửa đổi kích thước phông chữ */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
     margin: 0;
     padding: 0;
-    color: #202124;                            /* Màu chữ tối đạt chuẩn tương phản cao trên nền sáng */
+    color: #202124;
     background-color: #f8f9fa;
 }
 
+/* Lớp CSS cho nút chuyển nhanh đến nội dung chính (Chỉ hiện khi Tab) - Đạt chuẩn WAVE */
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 10px;
+    background-color: #0f2c59;
+    color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 4px;
+    text-decoration: none;
+    z-index: 999;
+    transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+    top: 10px;
+    outline: 2px solid #ffffff;
+}
+
 /* ==========================================================================
-   BƯỚC 4: Tạo kiểu cho thẻ header
+   ĐỊNH DẠNG HEADER VÀ TIÊU ĐỀ
    ========================================================================== */
 header {
-    background-color: #0f2c59;                 /* Sửa đổi màu nền sang xanh Navy đậm */
+    background-color: #0f2c59;
     padding: 25px 20px;
-    text-align: center;                        /* Căn giữa nội dung bên trong header */
-}
-
-/* Định dạng riêng cho tấm ảnh BaconGallupPark trong header */
-header img {
-    border-radius: 50%;                        /* Bo tròn hoàn toàn ảnh đại diện */
-    border: 4px solid #ffffff;                 /* Thêm viền trắng nổi bật */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Đổ bóng nhẹ nghệ thuật */
-    margin-bottom: 10px;
-}
-
-/* ==========================================================================
-   BƯỚC 5: Tạo kiểu cho thẻ nav (Thanh điều hướng)
-   ========================================================================== */
-nav {
-    background-color: #1d4ed8;                 /* Sửa đổi màu nền sang xanh Royal đạt chuẩn WAVE */
-    padding: 12px;
-    margin-bottom: 15px;
-    border-radius: 4px;
-}
-
-nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;                          /* Loại bỏ dấu chấm tròn danh sách */
-}
-
-/* ==========================================================================
-   BƯỚC 8: Tạo kiểu cho thẻ li (Các mục menu)
-   ========================================================================== */
-li {
-    display: inline-block;                     /* Sửa đổi thuộc tính hiển thị thành hàng ngang */
-    width: 180px;                              /* Sửa đổi thuộc tính chiều rộng */
     text-align: center;
 }
 
-/* Định dạng thẻ liên kết <a> bên trong nav để đảm bảo độ tương phản WAVE */
-nav a {
-    color: #ffffff;                            /* Chữ trắng trên nền xanh (Tương phản xuất sắc) */
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 15px;
+header img {
+    border-radius: 50%;
+    border: 4px solid #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
 }
 
-nav a:hover {
-    text-decoration: underline;                /* Tạo hiệu ứng gạch chân tương tác khi di chuột */
-}
-
-/* ==========================================================================
-   BƯỚC 9: Tạo kiểu cho thẻ h1 (Tiêu đề trang)
-   ========================================================================== */
 h1 {
-    text-align: center;                        /* Sửa đổi căn chỉnh văn bản vào giữa */
-    font-family: 'Georgia', serif;             /* Sửa đổi họ phông chữ sang serif sang trọng */
-    color: #ffffff;                            /* Sửa đổi thuộc tính màu chữ sang trắng */
+    text-align: center;
+    font-family: 'Georgia', serif;
+    color: #ffffff;
     margin-top: 15px;
     margin-bottom: 0;
     font-size: 2.2rem;
 }
 
 /* ==========================================================================
-   BƯỚC 6: Tạo kiểu cho thẻ main (Vùng nội dung chính)
+   ĐỊNH DẠNG THANH ĐIỀU HƯỚNG (NAV)
+   ========================================================================== */
+nav {
+    background-color: #1d4ed8;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    /* YÊU CẦU: Khối nội tuyến và chiều rộng khoảng 80% */
+    display: inline-block;
+    width: 80%;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* YÊU CẦU: Nhận xét (comment out) kiểu dáng cũ của phần tử li */
+/* li {
+    display: inline-block;
+    width: 180px;
+    text-align: center;
+}
+*/
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* YÊU CẦU: Bộ chọn hậu duệ định dạng ảnh TRONG nav rộng khoảng 10% */
+nav img {
+    width: 10%;
+    height: auto;
+}
+
+/* ==========================================================================
+   ĐỊNH DẠNG KHU VỰC NỘI DUNG CHÍNH (MAIN)
    ========================================================================== */
 main {
-    background-color: #ffffff;                 /* Sửa đổi màu nền sang trắng tinh */
-    font-size: 18px;                           /* Sửa đổi thuộc tính kích thước phông chữ */
+    background-color: #ffffff;
+    font-size: 18px;
     padding: 40px 20px;
-    max-width: 1000px;                         /* Giới hạn độ rộng nội dung để dễ đọc */
-    margin: 0 auto;                            /* Căn giữa vùng main ra giữa màn hình */
+    max-width: 1000px;
+    margin: 0 auto;
     min-height: 450px;
 }
 
-/* Định dạng các liên kết văn bản trong main để vượt qua bài kiểm tra WAVE */
 main a {
-    color: #1d4ed8;                            /* Màu xanh đậm tương phản tốt trên nền trắng */
+    color: #1d4ed8;
     text-decoration: underline;
 }
 
@@ -98,54 +122,70 @@ main a:hover {
     color: #0f2c59;
 }
 
-/* --------------------------------------------------------------------------
-   PHONG CÁCH BỔ SUNG: Bố cục lưới tự động (Flexbox) cho các thẻ chứa ảnh 
-   -------------------------------------------------------------------------- */
-main div {
-    display: flex;
-    flex-wrap: wrap;                           /* Tự động xuống dòng khi hết không gian màn hình */
-    gap: 20px;                                 /* Khoảng cách đều giữa các bức ảnh */
-    justify-content: center;                   /* Căn grid ảnh ra giữa vùng nội dung */
+p {
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #374151; /* Đảm bảo độ tương phản cao cho văn bản */
+}
+
+/* ==========================================================================
+   YÊU CẦU: ĐỊNH DẠNG BỐ CỤC KHỐI LƯỚI (.grid)
+   ========================================================================== */
+/* Định dạng lớp với bộ chọn bắt đầu bằng dấu chấm */
+.grid {
+    display: grid;
+    /* Lưới hai cột, mỗi cột xấp xỉ 40% */
+    grid-template-columns: 40% 40%;
+    /* Sử dụng các thuộc tính để căn chỉnh khoảng cách sao chép ảnh mẫu */
+    justify-content: space-around; 
+    align-items: center;           
+    row-gap: 25px;                 
     padding-top: 25px;
 }
 
-/* Định dạng đồng bộ cho tất cả các ảnh phong cảnh bạn vừa gửi */
-main img {
-    width: 220px;                              /* Ghi đè lại thuộc tính rộng 100 mặc định */
-    height: 280px;                             /* Tạo chiều cao cố định để lưới ảnh thẳng hàng tăm tắp */
-    object-fit: cover;                         /* Giúp ảnh tự động cúp gọn, không bao giờ bị méo hay giãn */
-    border-radius: 8px;                        /* Bo góc mịn màng */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Đổ bóng nhẹ tinh tế */
-    transition: transform 0.2s ease-in-out;    /* Tạo chuyển động mượt mà khi di chuột */
-}
-
-main img:hover {
-    transform: scale(1.05);                    /* Hiệu ứng phóng to nhẹ 5% cực sinh động */
+/* Bộ chọn hậu duệ: Chỉ áp dụng rộng 100% cho hình ảnh nằm TRONG lớp lưới (.grid) */
+.grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* ==========================================================================
-   BƯỚC 10: Tạo kiểu cho thẻ p (Các đoạn văn)
+   YÊU CẦU: ĐỊNH DẠNG BỐ CỤC LINH HOẠT (.flex)
    ========================================================================== */
-p {
-    line-height: 1.8;                          /* Sửa đổi thuộc tính chiều cao dòng (Đọc rất thoáng mắt) */
-    margin-bottom: 20px;
-    color: #374151;
+.flex {
+    display: flex;
+    /* Điều chỉnh các thuộc tính sao chép giao diện ảnh mẫu */
+    flex-wrap: wrap;               
+    justify-content: center;       
+    gap: 20px;
+    padding-top: 25px;
+}
+
+/* Định dạng riêng cho ảnh trong flex để không bị ảnh hưởng bởi quy tắc của grid */
+.flex img {
+    width: 220px;                  
+    height: 280px;                 
+    object-fit: cover;             
+    border-radius: 8px;            
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* ==========================================================================
-   BƯỚC 7: Tạo kiểu cho thẻ footer (Chân trang)
+   ĐỊNH DẠNG CHÂN TRANG (FOOTER)
    ========================================================================== */
 footer {
-    background-color: #1f2937;                 /* Sửa đổi thuộc tính màu nền thành xám đen đậm */
-    color: #f3f4f6;                            /* Màu chữ xám trắng siêu sáng (Vượt qua kiểm tra tương phản) */
+    background-color: #1f2937;
+    color: #f3f4f6;
     padding: 25px 20px;
     text-align: center;
     font-size: 14px;
 }
 
-/* Định dạng liên kết Coursera trong footer */
+/* Đổi màu link footer sáng hơn để vượt qua bài kiểm tra tương phản WAVE */
 footer a {
-    color: #60a5fa;                            /* Màu xanh dương sáng, tương phản hoàn hảo trên nền tối */
+    color: #60a5fa; 
     text-decoration: underline;
 }
 

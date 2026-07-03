@@ -5,10 +5,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Neighborhood Walk</title>
-  <!-- You will need to link to the CSS file -->
+  <!-- Sửa liên kết trỏ đúng vào thư mục css/style.css -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+  <!-- YÊU CẦU: Thêm liên kết "Chuyển đến Nội dung chính" hoạt động -->
+  <a href="#main-content" class="skip-link">Chuyển đến Nội dung chính</a>
+
   <header>
     <nav>
       <ul>
@@ -19,14 +23,14 @@
     </nav>
     <img src="images/BaconGallupPark.jpg" width="200" alt="Brown Labradoodle sitting next to a statue.">
     <h1>Michigan Parks</h1>
-
   </header>
-  <main>
-    <div>
-      <img src="images/bacon_in_the_woods.png" alt="brown labradoodle sitting near a stream in a wooded setting"
-        width="100">
-      <img src="images/bacon_near_the_fort.png"
-        alt="brown labradoodle posing in front of a makeshift fort made of branches" width="100">
+  
+  <!-- YÊU CẦU: Thêm id="main-content" vào thẻ main -->
+  <main id="main-content">
+    <!-- YÊU CẦU: Đổi sang lớp linh hoạt .flex và GIỮ NGUYÊN TOÀN BỘ LINK GỐC (.png, .JPG viết hoa, .jpg) -->
+    <div class="flex">
+      <img src="images/bacon_in_the_woods.png" alt="brown labradoodle sitting near a stream in a wooded setting" width="100">
+      <img src="images/bacon_near_the_fort.png" alt="brown labradoodle posing in front of a makeshift fort made of branches" width="100">
       <img src="images/downed_tree.png" alt="a downed tree crossign a stream" width="100">
       <img src="images/fort_in_woods.png" alt="a small fort made of branches" width="100">
       <img src="images/huron_river_cascades.JPG" alt=" two people on a kayak approaching some small rapids" width="100">
@@ -34,10 +38,9 @@
       <img src="images/mist_over_huron_river.JPG" alt="the mist rising over a river in the morning" width="100">
       <img src="images/munising.jpg" alt="small waterfall" width="100">
       <img src="images/reflected_tree.JPG" alt="reflection of a lake and trees" width="100">
-
     </div>
-
   </main>
+  
   <footer>
     <p>This page was originally created by Colleen van Lent for the <a
         href="https://www.coursera.org/specializations/web-design"> Web Design for Everybody</a> Specialization.
